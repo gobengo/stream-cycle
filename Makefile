@@ -19,8 +19,10 @@ server: build
 	npm start
 
 test: build
-	# uses karma start
 	npm test
+
+watch: build
+	mocha test/spec/* -w
 
 clean:
 	rm -rf node_modules lib dist

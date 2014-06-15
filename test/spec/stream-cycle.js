@@ -1,7 +1,7 @@
 "use strict";
 
 var cycle = require('stream-cycle');
-var ReadableArray = require('stream/contrib/readable-array');
+var ReadableArray = require('stream-arrays').ReadableArray;
 var assert = require('chai').assert;
 var sinon = require('sinon');
 

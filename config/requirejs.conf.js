@@ -8,11 +8,17 @@ require.config({
         chai: 'node_modules/chai/chai',
         debug: 'lib/debug/debug',
         inherits: 'lib/inherits/inherits',
-        'stream-cycle': 'src/index'
+        'stream-cycle': 'src/index',
+        'util-extend': 'node_modules/stream-objectmode/node_modules/util-extend/extend',
+        'events': 'node_modules/stream-objectmode/node_modules/events/events'
     },
     packages: [{
-        name: 'stream',
-        location: 'lib/stream/src'
+        name: 'stream-objectmode',
+        location: 'node_modules/stream-objectmode/src',
+    },{
+        name: 'stream-arrays',
+        location: 'node_modules/stream-arrays',
+        main: 'index'
     }],
     shim: {
         SockJS: {
