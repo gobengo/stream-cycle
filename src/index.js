@@ -36,7 +36,7 @@ module.exports = function (source) {
     // record what flows through cycle
     cycle._transform = function (chunk, done) {
         history.push(chunk);
-        done();
+        done(null, chunk);
     };
 
     // ignore .end() commands as you are INFINITE
