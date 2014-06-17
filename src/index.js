@@ -51,8 +51,8 @@ module.exports = function (source) {
                     this.push(next());
                 }.bind(this));
             }
-            cycle.read(0);
-        })
+            cycle.push(next());
+        });
     });
 
     // Initially, pipe the source through the cycle
